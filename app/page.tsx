@@ -54,7 +54,7 @@ export default function HomePage() {
             You Should Not Worry About Your Rental Property.
           </h1>
           <p className="text-xl sm:text-2xl text-blue-100 mb-10 max-w-2xl mx-auto">
-            Most landlords spend more time managing their property than enjoying the income from it. Property Management Consultants handles everything — so you don&apos;t have to.
+            Providing You Hassle-Free Property Management
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link
