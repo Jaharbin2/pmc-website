@@ -135,7 +135,7 @@ export default function AboutPage() {
             </div>
             <div className="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3268.3!2d-86.5861!3d34.7304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDQzJzQ5LjQiTiA4NsKwMzUnMDkuOSJX!5e0!3m2!1sen!2sus!4v1234567890"
+                src="https://maps.google.com/maps?q=228+Holmes+Avenue+NE,+Huntsville,+AL+35801&output=embed"
                 width="100%"
                 height="250"
                 style={{ border: 0 }}
