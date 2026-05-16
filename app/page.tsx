@@ -74,16 +74,12 @@ export default function HomePage() {
       </section>
 
       {/* Pain Points */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-brand-blue font-semibold uppercase tracking-widest text-sm mb-4">Sound familiar?</p>
-          <h2 className="text-4xl sm:text-5xl text-brand-navy mb-4 leading-tight">
-            We understand the frustration<br className="hidden sm:block" /> of owning rental property.
+      <section className="py-24 px-4 bg-brand-navy">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-4xl sm:text-5xl text-white mb-14 leading-tight">
+            If You&apos;re Tired of Dealing With
           </h2>
-          <p className="text-gray-500 text-lg mb-12 max-w-2xl mx-auto">
-            Whether you&apos;re self-managing or stuck with the wrong company, it doesn&apos;t have to be this hard.
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 text-left mb-12">
+          <div className="divide-y divide-white/10">
             {[
               { bold: 'Hidden fees that quietly eat your returns.', rest: ' Renewal fees, inspection charges, maintenance markups. You agreed to one rate and somehow pay twice that.' },
               { bold: 'Midnight maintenance calls.', rest: ' A burst pipe doesn\'t care what time it is. Right now, that call comes straight to you.' },
@@ -92,21 +88,18 @@ export default function HomePage() {
               { bold: 'No communication.', rest: ' Weeks without an update on your own property. You\'re left wondering what\'s actually happening.' },
               { bold: 'No idea if your property is being maintained.', rest: ' Is the tenant taking care of it? You shouldn\'t have to guess.' },
             ].map((item) => (
-              <div key={item.bold} className="flex items-start gap-4 bg-brand-cream rounded-xl p-5 border border-gray-100">
-                <div className="w-6 h-6 rounded-full bg-red-100 flex items-center justify-center shrink-0 mt-0.5">
-                  <svg className="w-3.5 h-3.5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </div>
-                <p className="text-gray-700 text-sm leading-relaxed">
-                  <span className="font-semibold text-brand-navy">{item.bold}</span>{item.rest}
+              <div key={item.bold} className="py-6 pl-5 border-l-2 border-brand-blue">
+                <p className="text-white/80 leading-relaxed text-lg">
+                  <span className="font-semibold text-white">{item.bold}</span>{item.rest}
                 </p>
               </div>
             ))}
           </div>
-          <p className="text-xl font-semibold text-brand-navy">
-            Property Management Consultants was built to solve every one of these.
-          </p>
+          <div className="mt-16 pt-10 border-t border-white/20">
+            <p className="text-4xl sm:text-5xl text-white leading-tight">
+              You Don&apos;t Have to Anymore.
+            </p>
+          </div>
         </div>
       </section>
 
