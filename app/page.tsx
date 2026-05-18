@@ -81,12 +81,9 @@ export default function HomePage() {
           </h2>
           <div className="divide-y divide-white/10">
             {[
-              { bold: 'Hidden fees that quietly eat your returns.', rest: ' Renewal fees, inspection charges, maintenance markups. You agreed to one rate and somehow pay twice that.' },
-              { bold: 'Midnight maintenance calls.', rest: ' A burst pipe doesn\'t care what time it is. Right now, that call comes straight to you.' },
-              { bold: 'Chasing late rent.', rest: ' Awkward conversations, no consistent follow-through, and money that\'s always a little short or late.' },
-              { bold: 'Vacancies that drag on.', rest: ' Every empty week costs you money, and you\'re the one driving out to show it every time.' },
-              { bold: 'No communication.', rest: ' Weeks without an update on your own property. You\'re left wondering what\'s actually happening.' },
-              { bold: 'No idea if your property is being maintained.', rest: ' Is the tenant taking care of it? You shouldn\'t have to guess.' },
+              { bold: 'Hidden fees that quietly eat your returns.', rest: ' Renewal fees, inspection charges, maintenance markups.' },
+              { bold: 'Midnight maintenance calls.', rest: ' Having to handle emergency repairs in addition to your full time job and other responsibilities.' },
+              { bold: 'Tenant issues.', rest: ' Late rent, lease violations, or evictions — without a system to handle them.' },
             ].map((item) => (
               <div key={item.bold} className="py-6 pl-5 border-l-2 border-brand-blue">
                 <p className="text-white/80 leading-relaxed text-lg">
