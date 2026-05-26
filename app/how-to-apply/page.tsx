@@ -16,7 +16,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'What credit score do I need to rent from Property Management Consultants?',
-      acceptedAnswer: { '@type': 'Answer', text: 'A credit score of 600 or above is preferred. Lower scores are reviewed on a case-by-case basis and may require an additional deposit.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'A credit score of 600 or above is preferred. Lower scores are reviewed case-by-case and may require an additional deposit.' },
     },
     {
       '@type': 'Question',
@@ -139,8 +139,8 @@ export default function HowToApplyPage() {
               {[
                 {
                   step: '1',
-                  title: 'Find a property on Tenant Turner',
-                  desc: 'Browse available listings at our Tenant Turner portal. When you find a property you want, click through to apply — you\'ll be directed to our Buildium portal to complete your application and pay the $40 fee. All adults 18+ in the household must apply separately.',
+                  title: 'Find a property and apply on Tenant Turner',
+                  desc: 'Browse available listings at our Tenant Turner portal. When you find a property you want, click "Apply Now" directly from the listing. All adults 18+ in the household must submit a separate application and pay the $40 fee.',
                 },
                 {
                   step: '2',
@@ -222,7 +222,7 @@ export default function HowToApplyPage() {
           {/* CTA */}
           <div className="text-center">
             <h2 className="text-3xl text-brand-navy mb-4">Ready to apply?</h2>
-            <p className="text-gray-600 mb-6">Browse available properties on Tenant Turner — you&apos;ll be directed from there to our application portal.</p>
+            <p className="text-gray-600 mb-6">Browse available properties on Tenant Turner and apply directly from the listing — no separate portal needed.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href={TENANT_TURNER_URL}

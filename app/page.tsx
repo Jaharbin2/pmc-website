@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import PropertyCarousel from '@/components/PropertyCarousel';
 
 export const metadata: Metadata = {
@@ -184,30 +185,43 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Stakes section */}
-      <section className="py-20 px-4 bg-brand-navy text-white">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-4xl mb-10">What happens without the right management company</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div className="bg-white/10 rounded-2xl p-8 border border-white/20">
-              <p className="text-xl text-blue-100 leading-relaxed">
-                Midnight maintenance calls you have to handle yourself
+      {/* Guide — Authority + Empathy */}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+            <Image
+              src="/images/jacob.jpg"
+              alt="Jacob Harbin, founder of Property Management Consultants"
+              width={480}
+              height={560}
+              className="rounded-2xl object-cover w-full shadow-md"
+            />
+            <div>
+              <div className="inline-flex items-center gap-2 bg-yellow-50 border border-yellow-200 rounded-full px-4 py-2 mb-6">
+                <div className="flex gap-0.5">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                    </svg>
+                  ))}
+                </div>
+                <span className="text-sm font-semibold text-gray-700">32 five-star Google reviews</span>
+              </div>
+              <h2 className="text-4xl text-brand-navy mb-5">Built by an investor, not a manager.</h2>
+              <p className="text-gray-600 text-lg leading-relaxed mb-5">
+                We know what it&apos;s like to own rental property and not be able to find a management company you can actually trust. Jacob Harbin started Property Management Consultants as a real estate investor — not as a manager who decided to start a company.
               </p>
-            </div>
-            <div className="bg-white/10 rounded-2xl p-8 border border-white/20">
-              <p className="text-xl text-blue-100 leading-relaxed">
-                Tenants who pay late — and no system to chase them
+              <p className="text-gray-600 text-lg leading-relaxed mb-8">
+                That means he understands your margins, your frustrations, and exactly what it costs when a management company doesn&apos;t do its job. Every policy we have was written from the owner&apos;s seat.
               </p>
-            </div>
-            <div className="bg-white/10 rounded-2xl p-8 border border-white/20">
-              <p className="text-xl text-blue-100 leading-relaxed">
-                Hidden fees that quietly eat your returns every month
-              </p>
+              <Link
+                href="/about"
+                className="inline-flex items-center text-brand-blue font-semibold hover:underline"
+              >
+                Our story →
+              </Link>
             </div>
           </div>
-          <p className="text-2xl font-semibold text-white">
-            Property Management Consultants was built to solve all three.
-          </p>
         </div>
       </section>
 
@@ -239,6 +253,25 @@ export default function HomePage() {
                 ))}
               </ul>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Explanatory Paragraph — BrandScript */}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl text-brand-navy mb-6">Property management in North Alabama, done right.</h2>
+          <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
+            {/* TODO: Replace with your BrandScript paragraph */}
+            <p>
+              At Property Management Consultants, we know that you want to be a landlord who doesn&apos;t have to think about their rental property every day. In order to do that, you need a management company you can fully hand off to — one that handles everything without hidden fees, missed calls, or surprises on your statement.
+            </p>
+            <p>
+              The problem is most property managers were built by managers, not investors. They don&apos;t understand your margins, and they don&apos;t feel the cost of their mistakes the way you do. That&apos;s why Jacob Harbin built Property Management Consultants from the owner&apos;s seat — as a North Alabama investor who needed a company he could trust and couldn&apos;t find one.
+            </p>
+            <p>
+              We believe owning rental property should be a source of income, not a second job. So we made it simple: one leasing fee, 10% monthly management, and a team that treats your property like their own. Book a free 15-minute call, let us take over, and collect your deposit every month — without the stress.
+            </p>
           </div>
         </div>
       </section>
