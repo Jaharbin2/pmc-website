@@ -4,7 +4,40 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Reviews | Property Management Consultants',
   description:
-    'Read what property owners and tenants say about Property Management Consultants in Huntsville, AL. All reviews from Google.',
+    '32 five-star Google reviews from property owners, tenants, and partners across North Alabama. See why landlords trust Property Management Consultants.',
+};
+
+const reviewSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: 'Property Management Consultants, LLC',
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '5',
+    reviewCount: '32',
+    bestRating: '5',
+    worstRating: '1',
+  },
+  review: [
+    {
+      '@type': 'Review',
+      author: { '@type': 'Person', name: 'Chad Howard' },
+      reviewRating: { '@type': 'Rating', ratingValue: '5' },
+      reviewBody: 'Jacob was a pleasure to work with and made renting our home stress free. He is in constant communication and always responsive. The best Property Manager I have had the pleasure of working with — across two rental properties over the past 13 years.',
+    },
+    {
+      '@type': 'Review',
+      author: { '@type': 'Person', name: 'Clay' },
+      reviewRating: { '@type': 'Rating', ratingValue: '5' },
+      reviewBody: "As a realtor, I've trusted him with multiple client referrals for managing their rental properties, and the feedback has been nothing but positive every single time. His service fees are extremely reasonable, and he's truly one of the most trustworthy people you'll meet in this industry.",
+    },
+    {
+      '@type': 'Review',
+      author: { '@type': 'Person', name: 'Michelle Scott' },
+      reviewRating: { '@type': 'Rating', ratingValue: '5' },
+      reviewBody: 'This is the first time that we have worked with a property manager and working with Jacob put our mind at ease — when we had questions, he had answers. Jacob is very professional, personable, and responsive.',
+    },
+  ],
 };
 
 const reviews = [
@@ -57,6 +90,12 @@ const reviews = [
     text: 'Jacob is amazing at taking care of renting and managing my property. Has been a great experience!',
   },
   {
+    name: 'James',
+    stars: 5,
+    type: 'Owner',
+    text: 'Jacob actually called me back and helped me get my house listed professionally and through the right channels.',
+  },
+  {
     name: 'Robert Coughlin',
     stars: 5,
     type: 'Vendor',
@@ -66,19 +105,19 @@ const reviews = [
     name: 'Martin Dindlebeck',
     stars: 5,
     type: 'Vendor',
-    text: 'We\'ve had the pleasure of working with Property Management Consultants as a maintenance service provider and it\'s been a consistently smooth and professional experience. Their team is organized, responsive, and clear in their communication, which makes coordinating maintenance jobs efficient and hassle-free. They respect our time and recommendations, which helps us deliver quality service to both property owners and tenants. Property Management Consultants is one of the most reliable and well-run management teams we\'ve worked with, and we\'re proud to continue our partnership with them.',
+    text: "We've had the pleasure of working with Property Management Consultants as a maintenance service provider and it's been a consistently smooth and professional experience. Their team is organized, responsive, and clear in their communication, which makes coordinating maintenance jobs efficient and hassle-free. They respect our time and recommendations, which helps us deliver quality service to both property owners and tenants. Property Management Consultants is one of the most reliable and well-run management teams we've worked with, and we're proud to continue our partnership with them.",
   },
   {
     name: 'Cody Cabaniss',
     stars: 5,
     type: 'Vendor',
-    text: 'I get to work with Property Management Consultants as their photographer and they are some of my favorite clients. They are so easy to work with and so helpful in making the properties ready to go for pictures, which makes my job that much easier. I am also a Realtor in TN and Jacob is who I will refer people to for property management services if I have anyone looking in Alabama!',
+    text: "I get to work with Property Management Consultants as their photographer and they are some of my favorite clients. They are so easy to work with and so helpful in making the properties ready to go for pictures, which makes my job that much easier. I am also a Realtor in TN and Jacob is who I will refer people to for property management services if I have anyone looking in Alabama!",
   },
   {
     name: 'Clay',
     stars: 5,
     type: 'Realtor',
-    text: 'Property Management Consultants has been incredible to work with. Jacob Harbin is one of the easiest and most professional guys in the business. As a realtor, I\'ve trusted him with multiple client referrals for managing their rental properties, and the feedback has been nothing but positive every single time. He treats my clients with the same level of care and attention that I do, which gives me complete peace of mind. His service fees are extremely reasonable, and he\'s truly one of the most trustworthy people you\'ll meet in this industry. Highly recommend!',
+    text: "Property Management Consultants has been incredible to work with. Jacob Harbin is one of the easiest and most professional guys in the business. As a realtor, I've trusted him with multiple client referrals for managing their rental properties, and the feedback has been nothing but positive every single time. He treats my clients with the same level of care and attention that I do, which gives me complete peace of mind. His service fees are extremely reasonable, and he's truly one of the most trustworthy people you'll meet in this industry. Highly recommend!",
   },
   {
     name: 'Zack Shelton',
@@ -93,22 +132,16 @@ const reviews = [
     text: 'Excellent service and communication. I highly recommend.',
   },
   {
-    name: 'James',
-    stars: 5,
-    type: 'Owner',
-    text: 'Jacob actually called me back and helped me get my house listed professionally and through the right channels.',
-  },
-  {
     name: 'Hunter Goode',
     stars: 5,
     type: 'Tenant',
-    text: 'One of the best property management companies I\'ve ever had the pleasure of dealing with. Jacob has been so efficient and friendly the entire time.',
+    text: "One of the best property management companies I've ever had the pleasure of dealing with. Jacob has been so efficient and friendly the entire time.",
   },
   {
     name: 'Amara Klein',
     stars: 5,
     type: 'Tenant',
-    text: 'I highly recommend Property Management Consultants. They\'re friendly, dependable, and consistently deliver great service. Couldn\'t ask for a better experience!',
+    text: "I highly recommend Property Management Consultants. They're friendly, dependable, and consistently deliver great service. Couldn't ask for a better experience!",
   },
   {
     name: 'Brittney Cooper',
@@ -120,7 +153,20 @@ const reviews = [
     name: 'Natalee Seal',
     stars: 5,
     type: 'Tenant',
-    text: 'They have been very understanding during my hardships while I\'m trying to catch up. 10/10 would recommend to anybody as a landlord.',
+    text: "They have been very understanding during my hardships while I'm trying to catch up. 10/10 would recommend to anybody as a landlord.",
+  },
+];
+
+const featured = [
+  {
+    name: 'Chad Howard',
+    type: 'Property Owner',
+    text: "Jacob was a pleasure to work with and made renting our home stress free. He is in constant communication and always responsive. I highly recommend Jacob — he is the best Property Manager I have had the pleasure of working with, across two rental properties over the past 13 years.",
+  },
+  {
+    name: 'Clay',
+    type: 'Realtor',
+    text: "As a realtor, I've trusted Jacob with multiple client referrals for managing their rental properties, and the feedback has been nothing but positive every single time. His service fees are extremely reasonable, and he's truly one of the most trustworthy people you'll meet in this industry.",
   },
 ];
 
@@ -128,12 +174,7 @@ function Stars({ count }: { count: number }) {
   return (
     <div className="flex gap-0.5">
       {[...Array(5)].map((_, i) => (
-        <svg
-          key={i}
-          className={`w-4 h-4 ${i < count ? 'text-yellow-400' : 'text-gray-200'}`}
-          fill="currentColor"
-          viewBox="0 0 24 24"
-        >
+        <svg key={i} className={`w-4 h-4 ${i < count ? 'text-yellow-400' : 'text-gray-200'}`} fill="currentColor" viewBox="0 0 24 24">
           <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
         </svg>
       ))}
@@ -141,13 +182,25 @@ function Stars({ count }: { count: number }) {
   );
 }
 
+const typeLabel: Record<string, string> = {
+  Owner: 'Property Owner',
+  Tenant: 'Tenant',
+  Vendor: 'Vendor',
+  Realtor: 'Realtor',
+};
+
 export default function ReviewsPage() {
   const ownerReviews = reviews.filter((r) => r.type === 'Owner');
   const otherReviews = reviews.filter((r) => r.type !== 'Owner');
 
-
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
+      />
+
+      {/* Hero */}
       <section className="bg-gradient-to-br from-brand-navy to-brand-blue text-white py-20 px-4 text-center">
         <div className="max-w-3xl mx-auto">
           <div className="flex items-center justify-center gap-1 mb-4">
@@ -157,15 +210,61 @@ export default function ReviewsPage() {
               </svg>
             ))}
           </div>
-          <h1 className="text-5xl sm:text-6xl mb-4">What Our Clients Say</h1>
+          <h1 className="text-5xl sm:text-6xl mb-4">Don&apos;t Take Our Word For It.</h1>
           <p className="text-xl text-blue-100">
-            Real reviews from property owners and tenants across North Alabama — all from Google.
+            32 five-star reviews from property owners, tenants, vendors, and partners across North Alabama — all from Google.
           </p>
         </div>
       </section>
 
+      {/* Aggregate stat bar */}
+      <div className="bg-white border-b border-gray-100 py-6 px-4">
+        <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12 text-center">
+          <div>
+            <div className="text-4xl font-bold text-brand-navy">32</div>
+            <div className="text-sm text-gray-500">Google Reviews</div>
+          </div>
+          <div className="hidden sm:block w-px h-10 bg-gray-200" />
+          <div>
+            <div className="text-4xl font-bold text-brand-navy">5.0</div>
+            <div className="text-sm text-gray-500">Average Rating</div>
+          </div>
+          <div className="hidden sm:block w-px h-10 bg-gray-200" />
+          <div className="flex gap-1 items-center">
+            {[...Array(5)].map((_, i) => (
+              <svg key={i} className="w-7 h-7 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+              </svg>
+            ))}
+          </div>
+        </div>
+      </div>
+
       <section className="py-20 px-4 bg-brand-cream">
         <div className="max-w-5xl mx-auto space-y-16">
+
+          {/* Featured reviews */}
+          <div>
+            <h2 className="text-3xl text-brand-navy mb-8">Featured Reviews</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {featured.map((r) => (
+                <div key={r.name} className="bg-brand-navy rounded-2xl p-8 flex flex-col gap-4">
+                  <div className="flex gap-0.5">
+                    {[...Array(5)].map((_, i) => (
+                      <svg key={i} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <p className="text-blue-100 leading-relaxed flex-1 text-lg">&ldquo;{r.text}&rdquo;</p>
+                  <div className="flex items-center justify-between pt-2 border-t border-white/20">
+                    <span className="font-semibold text-white">{r.name}</span>
+                    <span className="text-xs text-blue-300 uppercase tracking-wide font-medium">{r.type}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
 
           {/* Owner Reviews */}
           <div>
@@ -173,7 +272,10 @@ export default function ReviewsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {ownerReviews.map((review) => (
                 <div key={review.name} className="bg-white rounded-2xl p-7 border border-gray-100 shadow-sm flex flex-col gap-4">
-                  <Stars count={review.stars} />
+                  <div className="flex items-center justify-between">
+                    <Stars count={review.stars} />
+                    <span className="text-xs text-gray-400 font-medium uppercase tracking-wide">Property Owner</span>
+                  </div>
                   <p className="text-gray-700 leading-relaxed flex-1">&ldquo;{review.text}&rdquo;</p>
                   <div className="font-semibold text-brand-navy">{review.name}</div>
                 </div>
@@ -181,15 +283,15 @@ export default function ReviewsPage() {
             </div>
           </div>
 
-          {/* Tenant + Vendor + Realtor Reviews */}
+          {/* Other Reviews */}
           <div>
-            <h2 className="text-3xl text-brand-navy mb-8">From Tenants, Vendors & Referral Partners</h2>
+            <h2 className="text-3xl text-brand-navy mb-8">From Tenants, Vendors &amp; Partners</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {otherReviews.map((review) => (
                 <div key={review.name} className="bg-white rounded-2xl p-7 border border-gray-100 shadow-sm flex flex-col gap-4">
                   <div className="flex items-center justify-between">
                     <Stars count={review.stars} />
-                    <span className="text-xs text-gray-400 font-medium uppercase tracking-wide">{review.type}</span>
+                    <span className="text-xs text-gray-400 font-medium uppercase tracking-wide">{typeLabel[review.type]}</span>
                   </div>
                   <p className="text-gray-700 leading-relaxed flex-1">&ldquo;{review.text}&rdquo;</p>
                   <div className="font-semibold text-brand-navy">{review.name}</div>
