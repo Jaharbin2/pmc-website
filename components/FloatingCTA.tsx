@@ -1,10 +1,16 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+
+const TENANT_PATHS = ['/how-to-apply', '/rentals'];
 
 export default function FloatingCTA() {
   const [visible, setVisible] = useState(false);
+  const pathname = usePathname();
+
+  const isTenantPage = TENANT_PATHS.some(p => pathname === p || pathname.startsWith(p + '/'));
 
   useEffect(() => {
     function onScroll() {
@@ -13,6 +19,8 @@ export default function FloatingCTA() {
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
+
+  if (isTenantPage) return null;
 
   return (
     <div
