@@ -24,7 +24,13 @@ const services = [
 ];
 
 const serviceAreas = [
-  'Huntsville', 'Madison', 'Athens', 'Florence', 'Sheffield', 'Muscle Shoals', 'Tuscumbia',
+  { name: 'Huntsville', slug: 'huntsville' },
+  { name: 'Madison', slug: 'madison' },
+  { name: 'Athens', slug: 'athens' },
+  { name: 'Florence', slug: 'florence' },
+  { name: 'Sheffield', slug: null },
+  { name: 'Muscle Shoals', slug: null },
+  { name: 'Tuscumbia', slug: null },
 ];
 
 const reviewSchema = {
@@ -265,12 +271,22 @@ export default function HomePage() {
           <p className="text-gray-600 mb-8">We manage properties across North Alabama and surrounding communities.</p>
           <div className="flex flex-wrap justify-center gap-3">
             {serviceAreas.map((city) => (
-              <span
-                key={city}
-                className="px-4 py-2 bg-white border border-gray-200 rounded-full text-gray-700 font-medium"
-              >
-                {city}, AL
-              </span>
+              city.slug ? (
+                <Link
+                  key={city.name}
+                  href={`/locations/${city.slug}`}
+                  className="px-4 py-2 bg-white border border-gray-200 rounded-full text-gray-700 font-medium hover:border-brand-blue hover:text-brand-blue transition-colors"
+                >
+                  {city.name}, AL
+                </Link>
+              ) : (
+                <span
+                  key={city.name}
+                  className="px-4 py-2 bg-white border border-gray-200 rounded-full text-gray-700 font-medium"
+                >
+                  {city.name}, AL
+                </span>
+              )
             ))}
           </div>
         </div>

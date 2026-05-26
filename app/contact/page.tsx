@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import ContactForm from './ContactForm';
 
 export const metadata: Metadata = {
-  title: 'Contact Property Management Consultants | Property Management Consultants, LLC',
+  title: 'Contact Us | Property Management Consultants, LLC',
   description:
     'Get in touch with Property Management Consultants, LLC. Call, email, or send a message. We\'re available Mon–Fri 9am–5pm in Huntsville, AL.',
 };
@@ -33,8 +33,17 @@ export default function ContactPage() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                       </svg>
                     ),
-                    label: 'Phone',
+                    label: 'Phone (General / Tenants)',
                     content: <a href="tel:9388674438" className="text-brand-blue hover:underline">(938) 867-4438</a>,
+                  },
+                  {
+                    icon: (
+                      <svg className="w-5 h-5 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                      </svg>
+                    ),
+                    label: 'Phone (Property Owners)',
+                    content: <a href="tel:2567107911" className="text-brand-blue hover:underline">(256) 710-7911</a>,
                   },
                   {
                     icon: (

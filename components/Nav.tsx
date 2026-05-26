@@ -10,6 +10,7 @@ const navLinks = [
   { href: '/pricing', label: 'Pricing' },
   { href: '/owner-tools', label: 'Owner Tools' },
   { href: '/reviews', label: 'Reviews' },
+  { href: '/blog', label: 'Blog' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
 ];

@@ -76,9 +76,18 @@ export default function BookACallPage() {
               </ul>
 
               <div className="mt-8 p-5 bg-white rounded-xl border border-gray-200">
-                <div className="text-sm font-semibold text-gray-700 mb-2">Prefer to call or email?</div>
-                <a href="tel:9388674438" className="block text-brand-blue font-semibold hover:underline">(938) 867-4438</a>
-                <a href="mailto:Info@propertyconsultantsllc.com" className="block text-brand-blue text-sm hover:underline mt-1">Info@propertyconsultantsllc.com</a>
+                <div className="text-sm font-semibold text-gray-700 mb-3">Prefer to call or email?</div>
+                <div className="space-y-2">
+                  <div>
+                    <div className="text-xs text-gray-400 uppercase tracking-wide font-medium mb-0.5">Property Owners</div>
+                    <a href="tel:2567107911" className="text-brand-blue font-semibold hover:underline">(256) 710-7911</a>
+                  </div>
+                  <div>
+                    <div className="text-xs text-gray-400 uppercase tracking-wide font-medium mb-0.5">General</div>
+                    <a href="tel:9388674438" className="text-brand-blue font-semibold hover:underline">(938) 867-4438</a>
+                  </div>
+                  <a href="mailto:Info@propertyconsultantsllc.com" className="block text-brand-blue text-sm hover:underline pt-1">Info@propertyconsultantsllc.com</a>
+                </div>
               </div>
             </div>
 
