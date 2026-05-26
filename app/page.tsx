@@ -262,15 +262,17 @@ export default function HomePage() {
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl text-brand-navy mb-6">Property management in North Alabama, done right.</h2>
           <div className="space-y-4 text-gray-600 text-lg leading-relaxed">
-            {/* TODO: Replace with your BrandScript paragraph */}
             <p>
-              At Property Management Consultants, we know that you want to be a landlord who doesn&apos;t have to think about their rental property every day. In order to do that, you need a management company you can fully hand off to — one that handles everything without hidden fees, missed calls, or surprises on your statement.
+              At Property Management Consultants, we know that you want a profitable investment. In order to do that, you need systems in place that create stress-free management and get your property rented to excellent tenants.
             </p>
             <p>
-              The problem is most property managers were built by managers, not investors. They don&apos;t understand your margins, and they don&apos;t feel the cost of their mistakes the way you do. That&apos;s why Jacob Harbin built Property Management Consultants from the owner&apos;s seat — as a North Alabama investor who needed a company he could trust and couldn&apos;t find one.
+              The problem many property owners face is that they have to choose between paying multiple fees without really knowing what management is going to cost them each month, or managing it themselves on top of a full-time job. Which makes them feel like they&apos;re stuck — overpaying for subpar management or dedicating late nights to coordinate repairs and take showing calls.
             </p>
             <p>
-              We believe owning rental property should be a source of income, not a second job. So we made it simple: one leasing fee, 10% monthly management, and a team that treats your property like their own. Book a free 15-minute call, let us take over, and collect your deposit every month — without the stress.
+              We believe property owners should never be nickel-and-dimed by their management company. You should know clearly what it costs every month, and exactly what service you&apos;ll receive. That&apos;s why Jacob Harbin created Property Management Consultants — as an investor himself, he watched too many property owners pay high prices for low-quality management and decided to build something different: transparent pricing, a consistent service, and a team that treats your property like their own.
+            </p>
+            <p>
+              Here&apos;s how it works: schedule a free 15-minute owner call, then we hold an &ldquo;owner playbook call&rdquo; to build a gameplan and set expectations for your property, then we take over management and place a quality tenant. Everything is handled for you, every step of the way. So you can stop worrying about your property — and start being profitable.
             </p>
           </div>
         </div>
