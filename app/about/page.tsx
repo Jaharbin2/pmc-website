@@ -3,9 +3,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-  title: 'About Property Management Consultants | Property Management Consultants, LLC',
+  title: 'About Us | Property Management Consultants, LLC',
   description:
-    'Learn about Property Management Consultants, LLC — founded by investor Jacob Harbin in Huntsville, AL. Personal service, transparent pricing, investor-first mindset.',
+    'Property Management Consultants was built by a North Alabama landlord who needed a management company he could trust — and couldn\'t find one. Personal service, transparent pricing, no surprises.',
 };
 
 const serviceAreas = [
@@ -14,7 +14,7 @@ const serviceAreas = [
   { city: 'Athens', slug: 'athens', note: 'Growing community between Huntsville and Nashville' },
   { city: 'Florence', slug: 'florence', note: 'Cultural hub of the Shoals region' },
   { city: 'Sheffield', slug: null, note: 'Part of the greater Shoals area' },
-  { city: 'Muscle Shoals', slug: 'muscle-shoals', note: 'Music heritage and strong workforce' },
+  { city: 'Muscle Shoals', slug: null, note: 'Music heritage and strong workforce' },
   { city: 'Tuscumbia', slug: null, note: 'Historic city at the heart of the Shoals' },
 ];
 
@@ -23,9 +23,9 @@ export default function AboutPage() {
     <>
       <section className="bg-gradient-to-br from-brand-navy to-brand-blue text-white py-20 px-4 text-center">
         <div className="max-w-3xl mx-auto">
-          <h1 className="text-5xl sm:text-6xl mb-4">About Property Management Consultants</h1>
+          <h1 className="text-5xl sm:text-6xl mb-4">We Built the Company We Wished We&apos;d Had</h1>
           <p className="text-xl text-blue-100">
-            Built by an investor, for investors. Personal service and transparent pricing — from day one.
+            Most owners come to us after being let down somewhere else. We built Property Management Consultants so that wouldn&apos;t happen to you.
           </p>
         </div>
       </section>
@@ -45,21 +45,21 @@ export default function AboutPage() {
             {/* Right: Story + Differentiators */}
             <div className="space-y-10">
               <div>
-                <h2 className="text-4xl text-brand-navy mb-6">Our Story</h2>
+                <h2 className="text-4xl text-brand-navy mb-6">Why We Exist</h2>
                 <div className="space-y-5 text-gray-600 leading-relaxed">
                   <p>
-                    Jacob Harbin has been a North Alabama real estate investor since before Property Management Consultants existed. He&apos;s owned rentals, dealt with unreliable vendors, paid fees he didn&apos;t understand, and gone weeks without hearing from management companies about his own properties.
+                    If you&apos;ve owned a rental for any length of time, you know the feeling. A fee you didn&apos;t expect. A maintenance call at midnight you had to handle yourself. A property manager who goes quiet for weeks.
                   </p>
                   <p>
-                    He didn&apos;t start Property Management Consultants because he saw a business opportunity. He started it because he needed a management company he could trust — and couldn&apos;t find one.
+                    Jacob Harbin felt all of it — as a landlord, not a manager. He was a North Alabama real estate investor before Property Management Consultants existed. He dealt with unreliable vendors, paid fees he didn&apos;t understand, and went weeks without hearing from the company managing his own properties.
                   </p>
                   <p>
-                    If you own rental property in North Alabama, that&apos;s probably a familiar feeling. Property Management Consultants was built for you.
+                    He didn&apos;t start Property Management Consultants because he saw a business opportunity. He started it because he needed a company he could trust — and couldn&apos;t find one. So he built it himself.
                   </p>
                 </div>
               </div>
               <div className="bg-brand-cream rounded-2xl p-8 border border-gray-100">
-                <h3 className="text-2xl text-brand-navy mb-4">What Makes Property Management Consultants Different</h3>
+                <h3 className="text-2xl text-brand-navy mb-4">What This Means For You</h3>
                 <ul className="space-y-4">
                   {[
                     {
