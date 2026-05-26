@@ -4,6 +4,7 @@ import './globals.css';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import FloatingCTA from '@/components/FloatingCTA';
+import ChatNudge from '@/components/ChatNudge';
 
 export const metadata: Metadata = {
   title: {
@@ -79,6 +80,7 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
         <FloatingCTA />
+        <ChatNudge />
         <Script
           src="https://leasing-sms-ai-production.up.railway.app/widget.js"
           strategy="afterInteractive"
