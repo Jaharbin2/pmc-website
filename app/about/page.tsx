@@ -68,7 +68,7 @@ export default function AboutPage() {
                     },
                     {
                       title: 'Transparent pricing',
-                      desc: '$250 leasing fee. 10% management. The same two numbers every month, with no surprises.',
+                      desc: 'A one-time $250 leasing fee when we place a tenant. Then 10% of monthly rent — nothing else, ever.',
                     },
                     {
                       title: 'Personal relationships',
@@ -77,6 +77,10 @@ export default function AboutPage() {
                     {
                       title: 'No minimum portfolio',
                       desc: "Whether you own one property or ten, you get the same full-service management experience.",
+                    },
+                    {
+                      title: 'NARPM member',
+                      desc: 'Property Management Consultants is a proud member of the National Association of Residential Property Managers — the professional standard in the industry.',
                     },
                   ].map((item) => (
                     <li key={item.title} className="flex gap-3">

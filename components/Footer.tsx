@@ -13,8 +13,8 @@ const ownerLinks = [
 ];
 
 const tenantLinks = [
-  { href: '/rentals', label: 'Browse Rentals' },
   { href: '/how-to-apply', label: 'How to Apply' },
+  { href: 'https://app.tenantturner.com/listings/propertymanagementconsultants', label: 'Browse Rentals' },
 ];
 
 const companyLinks = [
@@ -111,8 +111,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-blue-800 mt-10 pt-6 text-center text-blue-300 text-sm">
-          © 2025 Property Management Consultants, LLC. All rights reserved.
+        <div className="border-t border-blue-800 mt-10 pt-6 text-center text-blue-300 text-sm space-y-1">
+          <p>Proud member of the <span className="text-white font-medium">National Association of Residential Property Managers (NARPM)</span></p>
+          <p>© 2026 Property Management Consultants, LLC. All rights reserved.</p>
         </div>
       </div>
     </footer>
