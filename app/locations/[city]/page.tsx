@@ -84,8 +84,69 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
   const data = cityData[city];
   if (!data) notFound();
 
+  const localBusinessSchema = {
+    '@context': 'https://schema.org',
+    '@type': ['LocalBusiness', 'RealEstateAgent'],
+    name: 'Property Management Consultants, LLC',
+    url: `https://propertyconsultantsllc.com/locations/${city}`,
+    telephone: '+19388674438',
+    email: 'Info@propertyconsultantsllc.com',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: '228 Holmes Avenue NE, 2nd Floor',
+      addressLocality: 'Huntsville',
+      addressRegion: 'AL',
+      postalCode: '35801',
+      addressCountry: 'US',
+    },
+    areaServed: { '@type': 'City', name: `${data.display}, ${data.state}` },
+    description: `Full-service property management in ${data.display}, ${data.state}. Transparent pricing: $250 leasing fee + 10% monthly management. No hidden fees.`,
+    priceRange: '$250 leasing fee + 10% monthly management',
+  };
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: `How much does property management cost in ${data.display}, ${data.state}?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: `Property Management Consultants charges a one-time $250 leasing fee each time a vacancy is filled, then 10% of monthly rent for ongoing management. No renewal fees, no inspection fees, no hidden charges.`,
+        },
+      },
+      {
+        '@type': 'Question',
+        name: `Does Property Management Consultants manage properties in ${data.display}, AL?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: `Yes. Property Management Consultants manages residential rental properties throughout ${data.display} and the surrounding North Alabama area. Services include tenant screening, leasing, rent collection, maintenance coordination, inspections, and accounting.`,
+        },
+      },
+      {
+        '@type': 'Question',
+        name: `How long does it take to find a tenant for a rental in ${data.display}?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: `Lease-up times in ${data.display} vary by property type and price point, but PMC typically places qualified tenants within a few weeks of listing. Properties are marketed across major rental platforms and screened thoroughly.`,
+        },
+      },
+      {
+        '@type': 'Question',
+        name: `What services are included in property management in ${data.display}?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: `Property Management Consultants provides full-service management including tenant marketing, screening, lease preparation, move-in/move-out inspections, rent collection, maintenance coordination, bi-annual inspections, monthly financial statements, and annual 1099 preparation.`,
+        },
+      },
+    ],
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section className="bg-gradient-to-br from-brand-navy to-brand-blue text-white py-20 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-blue-200 text-sm font-medium mb-3 uppercase tracking-wide">Property Management</div>
