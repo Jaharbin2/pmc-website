@@ -18,9 +18,52 @@ const serviceAreas = [
   { city: 'Tuscumbia', slug: null, note: 'Historic city at the heart of the Shoals' },
 ];
 
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Is Property Management Consultants a licensed property management company?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Property Management Consultants, LLC is a licensed property management company based in Huntsville, AL and is a member of the National Association of Residential Property Managers (NARPM).',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Who owns Property Management Consultants?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Property Management Consultants was founded by Jacob Harbin, a North Alabama real estate investor who started the company after experiencing firsthand the shortcomings of other property management companies.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What areas does Property Management Consultants serve?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Property Management Consultants serves Huntsville, Madison, Athens, Florence, Sheffield, Muscle Shoals, Tuscumbia, and surrounding North Alabama communities.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How is Property Management Consultants different from other property management companies?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'PMC offers completely transparent pricing with no hidden fees — just a $250 one-time leasing fee and 10% monthly management. The company was founded by a landlord who understands the investor perspective.',
+      },
+    },
+  ],
+};
+
 export default function AboutPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <section className="bg-gradient-to-br from-brand-navy to-brand-blue text-white py-20 px-4 text-center">
         <div className="max-w-3xl mx-auto">
           <h1 className="text-5xl sm:text-6xl mb-4">We Built the Company We Wished We&apos;d Had</h1>

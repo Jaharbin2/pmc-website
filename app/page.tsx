@@ -40,11 +40,40 @@ const reviewSchema = {
   name: 'Property Management Consultants, LLC',
   aggregateRating: {
     '@type': 'AggregateRating',
-    ratingValue: '5',
-    reviewCount: '19',
+    ratingValue: '5.0',
+    reviewCount: '33',
     bestRating: '5',
-    worstRating: '1',
   },
+  review: [
+    {
+      '@type': 'Review',
+      author: {
+        '@type': 'Person',
+        name: 'Caleb B.',
+      },
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: '5',
+        bestRating: '5',
+      },
+      reviewBody:
+        'Jacob and his team have proved to be very knowledgeable and capable. They have been very helpful in getting tenants into my rental property quickly and smoothly.',
+    },
+    {
+      '@type': 'Review',
+      author: {
+        '@type': 'Person',
+        name: 'Google Reviewer',
+      },
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: '5',
+        bestRating: '5',
+      },
+      reviewBody:
+        'Property Management Consultants has been great from day one. Jacob Harbin has gone above and beyond.',
+    },
+  ],
 };
 
 export default function HomePage() {
@@ -55,8 +84,12 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
       />
       {/* Hero */}
-      <section className="bg-gradient-to-br from-brand-navy via-brand-navy to-brand-blue text-white py-24 px-4">
-        <div className="max-w-5xl mx-auto text-center">
+      <section
+        className="relative text-white py-24 px-4 overflow-hidden"
+        style={{ backgroundImage: 'url(/images/hero.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}
+      >
+        <div className="absolute inset-0 bg-brand-navy/55" />
+        <div className="relative max-w-5xl mx-auto text-center">
           <h1 className="text-4xl sm:text-6xl lg:text-7xl mb-6 leading-tight">
             You Should Not Worry About Your Rental Property.
           </h1>
@@ -66,40 +99,58 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link
               href="/book-a-call"
-              className="inline-flex items-center justify-center px-8 py-4 bg-brand-blue text-white font-semibold rounded-lg text-lg hover:bg-white hover:text-brand-navy transition-colors"
+              className="inline-flex items-center justify-center px-8 py-4 bg-brand-gold text-white font-semibold rounded-lg text-lg hover:bg-white hover:text-brand-navy transition-colors"
             >
               Book a 15-Minute Owner Call
             </Link>
-            <Link
-              href="/rentals"
+            <a
+              href="https://app.tenantturner.com/listings/propertymanagementconsultants"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-blue-200 text-base font-medium hover:text-white transition-colors underline underline-offset-2"
             >
               Browse Rentals
-            </Link>
+            </a>
           </div>
         </div>
       </section>
 
       {/* Pain Points */}
       <section className="py-24 px-4 bg-brand-navy">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-4xl sm:text-5xl text-white mb-14 leading-tight">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl sm:text-5xl text-white mb-14 leading-tight text-center">
             If You&apos;re Tired of Dealing With
           </h2>
-          <div className="divide-y divide-white/10">
-            {[
-              { bold: 'Hidden fees that quietly eat your returns.', rest: ' Renewal fees, inspection charges, maintenance markups.' },
-              { bold: 'Midnight maintenance calls.', rest: ' Having to handle emergency repairs in addition to your full time job and other responsibilities.' },
-              { bold: 'Tenant issues.', rest: ' Late rent, lease violations, or evictions — without a system to handle them.' },
-            ].map((item) => (
-              <div key={item.bold} className="py-6 pl-5 border-l-2 border-brand-blue">
-                <p className="text-white/80 leading-relaxed text-lg">
-                  <span className="font-semibold text-white">{item.bold}</span>{item.rest}
-                </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+            <div className="bg-white rounded-2xl p-10 flex flex-col gap-5 shadow-xl">
+              <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center shrink-0">
+                <svg className="w-8 h-8 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
               </div>
-            ))}
+              <h3 className="text-2xl font-semibold text-brand-navy">Hidden fees that quietly eat your returns.</h3>
+              <p className="text-gray-600 leading-relaxed text-lg">Renewal fees, inspection charges, maintenance markups — charges you didn&apos;t see coming.</p>
+            </div>
+            <div className="bg-white rounded-2xl p-10 flex flex-col gap-5 shadow-xl">
+              <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center shrink-0">
+                <svg className="w-8 h-8 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-semibold text-brand-navy">Midnight maintenance calls.</h3>
+              <p className="text-gray-600 leading-relaxed text-lg">Emergency repairs on top of a full-time job and everything else life demands of you.</p>
+            </div>
+            <div className="bg-white rounded-2xl p-10 flex flex-col gap-5 shadow-xl">
+              <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center shrink-0">
+                <svg className="w-8 h-8 text-brand-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-semibold text-brand-navy">Tenant issues.</h3>
+              <p className="text-gray-600 leading-relaxed text-lg">Late rent, lease violations, or evictions — without a reliable system to handle them.</p>
+            </div>
           </div>
-          <div className="mt-16 pt-10 border-t border-white/20">
+          <div className="pt-10 border-t border-white/20 text-center">
             <p className="text-4xl sm:text-5xl text-white leading-tight">
               You Don&apos;t Have to Anymore.
             </p>
@@ -200,12 +251,12 @@ export default function HomePage() {
               <div className="inline-flex items-center gap-2 bg-yellow-50 border border-yellow-200 rounded-full px-4 py-2 mb-6">
                 <div className="flex gap-0.5">
                   {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                    <svg key={i} className="w-4 h-4 text-brand-gold" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                     </svg>
                   ))}
                 </div>
-                <span className="text-sm font-semibold text-gray-700">32 five-star Google reviews</span>
+                <span className="text-sm font-semibold text-gray-700">33 five-star Google reviews</span>
               </div>
               <h2 className="text-4xl text-brand-navy mb-5">Built by an investor, not a manager.</h2>
               <p className="text-gray-600 text-lg leading-relaxed mb-5">
@@ -278,6 +329,58 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className="py-20 px-4 bg-brand-cream">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl text-brand-navy mb-3">Frequently Asked Questions</h2>
+            <p className="text-gray-500">Everything property owners want to know before getting started.</p>
+          </div>
+          <div className="space-y-3">
+            {[
+              {
+                q: 'How much does property management cost?',
+                a: 'Our fees are simple and transparent: a $250 one-time leasing fee when we place a tenant, and 10% of gross monthly rent for ongoing management. No renewal fees, no startup fees, no maintenance markups, no admin fees. Ever.',
+              },
+              {
+                q: "What's included in the monthly management fee?",
+                a: 'Everything. Rent collection, maintenance coordination, tenant communication, monthly financial statements, bi-annual inspections, lease renewals, and more. There are no à la carte charges — one fee covers the full service.',
+              },
+              {
+                q: 'How quickly can you find a tenant?',
+                a: 'Most of our properties are leased within 2–4 weeks of listing. We market across all major rental platforms, coordinate showings through Tenant Turner, and screen thoroughly to place qualified tenants quickly.',
+              },
+              {
+                q: "What happens if a tenant doesn't pay rent?",
+                a: "We follow a clear process: reminder notices, late fee enforcement, and eviction management if needed. You won't have to make a single phone call — we handle everything and keep you informed throughout.",
+              },
+              {
+                q: 'Do you handle maintenance?',
+                a: 'Yes. Tenants submit all requests through the Buildium portal. We coordinate with our vetted vendor network, get the work done, and send you documentation. You\'re never on the phone at midnight.',
+              },
+              {
+                q: "Can I see my property's financials online?",
+                a: 'Absolutely. You get access to the owner portal through Buildium where you can view monthly statements, maintenance records, and all activity on your property at any time.',
+              },
+              {
+                q: 'How do I get started?',
+                a: 'Book a free 15-minute owner call. We\'ll learn about your property, answer your questions, and give you a clear picture of what working together looks like. No pressure, no commitment.',
+              },
+            ].map((item) => (
+              <details key={item.q} className="group bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+                <summary className="flex items-center justify-between gap-4 px-7 py-5 cursor-pointer list-none">
+                  <span className="text-lg font-semibold text-brand-navy">{item.q}</span>
+                  <svg className="w-5 h-5 text-brand-blue shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div className="px-7 pb-6 text-gray-600 leading-relaxed">{item.a}</div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Rent Estimator Teaser */}
       <section className="py-16 px-4 bg-white">
         <div className="max-w-4xl mx-auto text-center">
@@ -335,12 +438,14 @@ export default function HomePage() {
             Browse our available properties across North Alabama.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Link
-              href="/rentals"
+            <a
+              href="https://app.tenantturner.com/listings/propertymanagementconsultants"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-5 py-2.5 border-2 border-brand-navy text-brand-navy font-semibold rounded-lg hover:bg-brand-navy hover:text-white transition-colors text-sm"
             >
               Browse Rentals
-            </Link>
+            </a>
             <a
               href="https://app.tenantturner.com/listings/propertymanagementconsultants"
               target="_blank"
@@ -359,7 +464,7 @@ export default function HomePage() {
           <div className="text-center mb-12">
             <div className="flex items-center justify-center gap-1 mb-3">
               {[...Array(5)].map((_, i) => (
-                <svg key={i} className="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                <svg key={i} className="w-6 h-6 text-brand-gold" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                 </svg>
               ))}
@@ -390,14 +495,14 @@ export default function HomePage() {
                 text: 'Jacob was a pleasure to work with and made renting our home stress free. He is in constant communication and always responsive. The best Property Manager I have had the pleasure of working with — across two rental properties over the past 13 years.',
               },
               {
-                name: 'Christian Neidhamer',
-                text: 'Great company to work with, could not be happier! Makes the whole rental process a breeze. Would recommend to family and friends.',
+                name: 'Caleb Beck',
+                text: 'Jacob and his team have proved to be very knowledgeable and capable. They have been very helpful in getting tenants into my rental property quickly and smoothly. So far, my experience has been fantastic and I highly recommend utilizing the services of Property Management Consultants!',
               },
             ].map((review) => (
               <div key={review.name} className="bg-brand-cream rounded-2xl p-6 border border-gray-100 flex flex-col gap-4">
                 <div className="flex gap-1">
                   {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                    <svg key={i} className="w-4 h-4 text-brand-gold" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                     </svg>
                   ))}
@@ -427,7 +532,7 @@ export default function HomePage() {
           </p>
           <Link
             href="/book-a-call"
-            className="inline-flex items-center px-8 py-4 bg-brand-blue text-white font-semibold rounded-lg text-lg hover:bg-white hover:text-brand-navy transition-colors"
+            className="inline-flex items-center px-8 py-4 bg-brand-gold text-white font-semibold rounded-lg text-lg hover:bg-white hover:text-brand-navy transition-colors"
           >
             Book a 15-Minute Owner Call
           </Link>
