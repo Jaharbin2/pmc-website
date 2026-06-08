@@ -97,7 +97,7 @@ export default function AboutPage() {
                     Jacob Harbin was one of those owners. He managed his own North Alabama rentals for years because the way most companies operated didn&apos;t make sense to him as an investor. And he watched others around him — good owners with good properties — burn out completely. Not because owning rentals was too hard, but because the management experience made it that way.
                   </p>
                   <p>
-                    Property Management Consultants exists for those owners. Simple pricing. Real communication. A team that treats your investment like one.
+                    Property Management Consultants exists for those owners. Simple process. Transparent pricing. Real communication. So your investment finally works the way it was supposed to.
                   </p>
                 </div>
               </div>
