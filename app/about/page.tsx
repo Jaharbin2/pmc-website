@@ -91,13 +91,13 @@ export default function AboutPage() {
                 <h2 className="text-4xl text-brand-navy mb-6">Why We Exist</h2>
                 <div className="space-y-5 text-gray-600 leading-relaxed">
                   <p>
-                    If you&apos;ve owned a rental for any length of time, you know the feeling. A fee you didn&apos;t expect. A maintenance call at midnight you had to handle yourself. A property manager who goes quiet for weeks.
+                    Most property owners don&apos;t start out looking for a manager. They start out doing it themselves — because they&apos;ve heard the stories. Fees that don&apos;t add up. Managers who go quiet. A property that was supposed to be passive income turning into a second job with someone else&apos;s hand in the profit.
                   </p>
                   <p>
-                    Jacob Harbin felt all of it — as a landlord, not a manager. He was a North Alabama real estate investor before Property Management Consultants existed. He dealt with unreliable vendors, paid fees he didn&apos;t understand, and went weeks without hearing from the company managing his own properties.
+                    Jacob Harbin was one of those owners. He managed his own North Alabama rentals for years because the way most companies operated didn&apos;t make sense to him as an investor. And he watched others around him — good owners with good properties — burn out completely. Not because owning rentals was too hard, but because the management experience made it that way.
                   </p>
                   <p>
-                    He didn&apos;t start Property Management Consultants because he saw a business opportunity. He started it because he needed a company he could trust — and couldn&apos;t find one. So he built it himself.
+                    Property Management Consultants exists for those owners. Simple pricing. Real communication. A team that treats your investment like one.
                   </p>
                 </div>
               </div>
