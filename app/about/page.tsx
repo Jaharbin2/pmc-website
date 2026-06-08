@@ -91,10 +91,10 @@ export default function AboutPage() {
                 <h2 className="text-4xl text-brand-navy mb-6">Why We Exist</h2>
                 <div className="space-y-5 text-gray-600 leading-relaxed">
                   <p>
-                    Most property owners don&apos;t start out looking for a manager. They start out doing it themselves — because they&apos;ve heard the stories. Fees that don&apos;t add up. Managers who go quiet. A property that was supposed to be passive income turning into a second job with someone else&apos;s hand in the profit.
+                    Most rental owners take one of two paths. They manage it themselves — and end up fielding tenant calls at midnight, chasing late rent, and wondering when passive income became a second job. Or they hire a management company and watch fees quietly eat into their margins until the property costs more than it makes. Some get so fed up they stop renting altogether.
                   </p>
                   <p>
-                    Jacob Harbin was one of those owners. He managed his own North Alabama rentals for years because the way most companies operated didn&apos;t make sense to him as an investor. And he watched others around him — good owners with good properties — burn out completely. Not because owning rentals was too hard, but because the management experience made it that way.
+                    Jacob Harbin heard both stories over and over as a North Alabama real estate investor. He managed his own properties for years — not because he had to, but because he&apos;d seen what bad management looked like up close and didn&apos;t trust the alternative. He knew the industry had a problem, and he knew owners deserved better.
                   </p>
                   <p>
                     Property Management Consultants exists for those owners. Simple process. Transparent pricing. Real communication. So your investment finally works the way it was supposed to.
