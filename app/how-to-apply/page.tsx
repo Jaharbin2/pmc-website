@@ -26,7 +26,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'What is the application fee?',
-      acceptedAnswer: { '@type': 'Answer', text: 'The application fee is $40 per adult (18+). It is non-refundable and covers credit, background, and eviction checks.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'The application fee is $60 per adult (18+). It is non-refundable and covers credit, background, and eviction checks.' },
     },
     {
       '@type': 'Question',
@@ -80,7 +80,7 @@ export default function HowToApplyPage() {
                 { label: 'Income', value: '3× monthly rent', detail: 'Verified via pay stubs, bank statements, or tax returns.' },
                 { label: 'Eviction History', value: 'None in 7 years', detail: 'Evictions within 7 years are an automatic denial.' },
                 { label: 'Criminal Background', value: 'Reviewed individually', detail: 'Nature, date, and relevance are all considered.' },
-                { label: 'Application Fee', value: '$40 per adult', detail: 'Non-refundable. Covers credit, background, and eviction checks.' },
+                { label: 'Application Fee', value: '$60 per adult', detail: 'Non-refundable. Covers credit, background, and eviction checks.' },
                 { label: 'Rental History', value: 'Positive references', detail: 'We contact previous landlords when applicable.' },
               ].map((item) => (
                 <div key={item.label} className="bg-brand-cream rounded-xl p-5 border border-gray-100">
@@ -140,7 +140,7 @@ export default function HowToApplyPage() {
                 {
                   step: '1',
                   title: 'Find a property and apply on Tenant Turner',
-                  desc: 'Browse available listings at our Tenant Turner portal. When you find a property you want, click "Apply Now" directly from the listing. All adults 18+ in the household must submit a separate application and pay the $40 fee.',
+                  desc: 'Browse available listings at our Tenant Turner portal. When you find a property you want, click "Apply Now" directly from the listing. All adults 18+ in the household must submit a separate application and pay the $60 fee.',
                 },
                 {
                   step: '2',
@@ -232,12 +232,6 @@ export default function HowToApplyPage() {
               >
                 Browse Listings &amp; Apply Now
               </a>
-              <Link
-                href="/rentals"
-                className="inline-flex items-center justify-center px-8 py-4 border-2 border-brand-navy text-brand-navy font-semibold rounded-lg text-lg hover:bg-brand-navy hover:text-white transition-colors"
-              >
-                Browse Available Rentals
-              </Link>
             </div>
           </div>
         </div>
