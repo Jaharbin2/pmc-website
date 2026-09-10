@@ -13,7 +13,7 @@ const cityData: Record<string, {
   huntsville: {
     display: 'Huntsville',
     state: 'AL',
-    metaDesc: 'Professional property management in Huntsville, AL. Property Management Consultants offers transparent pricing — $250 leasing fee + 10% monthly — with no hidden fees. Serving the Rocket City.',
+    metaDesc: 'Professional property management in Huntsville, AL. Property Management Consultants offers transparent pricing — $500 leasing fee + 10% monthly — with no hidden fees. Serving the Rocket City.',
     intro: "Huntsville, Alabama — the Rocket City — is one of the fastest-growing metros in the Southeast. Fueled by a booming aerospace, defense, and tech sector centered around Redstone Arsenal and Cummings Research Park, Huntsville consistently attracts high-earning professionals and a well-qualified rental population.",
     market: "Huntsville's rental market remains strong across all property types, from downtown condos to suburban single-family homes. Demand outpaces supply in many neighborhoods, especially those close to major employment corridors. Vacancy rates are low, lease-up times are fast, and rents have trended upward year over year.",
     neighborhoods: ['Downtown', 'Five Points', 'MidCity', 'Jones Valley', 'Hampton Cove', 'Meridianville'],
@@ -29,7 +29,7 @@ const cityData: Record<string, {
   athens: {
     display: 'Athens',
     state: 'AL',
-    metaDesc: 'Property management in Athens, AL. Property Management Consultants manages rentals in Athens with simple pricing — $250 leasing fee + 10% monthly — and no hidden fees.',
+    metaDesc: 'Property management in Athens, AL. Property Management Consultants manages rentals in Athens with simple pricing — $500 leasing fee + 10% monthly — and no hidden fees.',
     intro: "Athens, Alabama sits in Limestone County, midway between Huntsville and Nashville on I-65. The city has seen strong growth as affordability drives renters and buyers out of the more expensive Huntsville market. Athens offers a charming historic downtown, excellent schools, and a growing business community.",
     market: "Athens presents excellent value for landlords. Rents are favorable relative to purchase prices, and the proximity to Huntsville's job market drives steady rental demand from commuters seeking more affordable housing. The market has tightened considerably in recent years as the city has grown.",
     neighborhoods: ['Downtown Athens', 'Ardmore area', 'Limestone County communities'],
@@ -100,8 +100,8 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
       addressCountry: 'US',
     },
     areaServed: { '@type': 'City', name: `${data.display}, ${data.state}` },
-    description: `Full-service property management in ${data.display}, ${data.state}. Transparent pricing: $250 leasing fee + 10% monthly management. No hidden fees.`,
-    priceRange: '$250 leasing fee + 10% monthly management',
+    description: `Full-service property management in ${data.display}, ${data.state}. Transparent pricing: $500 leasing fee + 10% monthly management. No hidden fees.`,
+    priceRange: '$500 leasing fee + 10% monthly management',
   };
 
   const faqSchema = {
@@ -113,7 +113,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
         name: `How much does property management cost in ${data.display}, ${data.state}?`,
         acceptedAnswer: {
           '@type': 'Answer',
-          text: `Property Management Consultants charges a one-time $250 leasing fee each time a vacancy is filled, then 10% of monthly rent for ongoing management. No renewal fees, no inspection fees, no hidden charges.`,
+          text: `Property Management Consultants charges a one-time $500 leasing fee each time a vacancy is filled, then 10% of monthly rent for ongoing management. No renewal fees, no inspection fees, no hidden charges.`,
         },
       },
       {
@@ -205,7 +205,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
           <p className="text-gray-600 mb-10 text-lg">No hidden fees, no surprises. Just two numbers.</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-xl mx-auto mb-10">
             <div className="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm text-center">
-              <div className="text-5xl font-bold text-brand-blue mb-2">$250</div>
+              <div className="text-5xl font-bold text-brand-blue mb-2">$500</div>
               <div className="text-brand-navy font-semibold">One-Time Leasing Fee</div>
               <div className="text-gray-500 text-sm mt-1">Paid once when we place a tenant</div>
             </div>

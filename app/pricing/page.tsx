@@ -5,7 +5,7 @@ import NetIncomeCalculator from '@/components/NetIncomeCalculator';
 export const metadata: Metadata = {
   title: 'Pricing | Property Management Consultants',
   description:
-    'Simple, transparent property management pricing. $250 one-time leasing fee + 10% monthly management. No renewal fees, no inspection fees, no hidden charges.',
+    'Simple, transparent property management pricing. $500 one-time leasing fee + 10% monthly management. No renewal fees, no inspection fees, no hidden charges.',
 };
 
 const noFees = [
@@ -30,7 +30,7 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'How much does property management cost in Huntsville AL?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Property Management Consultants charges a one-time $250 leasing fee when a new tenant is placed, and a 10% monthly management fee based on rent collected. There are no renewal fees, inspection fees, maintenance markups, or any other charges.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Property Management Consultants charges a one-time $500 leasing fee when a new tenant is placed, and a 10% monthly management fee based on rent collected. There are no renewal fees, inspection fees, maintenance markups, or any other charges.' },
     },
     {
       '@type': 'Question',
@@ -45,12 +45,12 @@ const faqSchema = {
     {
       '@type': 'Question',
       name: 'What is the leasing fee for property management in Huntsville AL?',
-      acceptedAnswer: { '@type': 'Answer', text: 'The leasing fee at Property Management Consultants is a flat $250, charged once when a new tenant is placed. This covers listing, marketing, showings, screening, lease drafting, and move-in coordination. Most competitors charge 50–100% of the first month\'s rent ($700–$1,400 on a $1,400/mo property).' },
+      acceptedAnswer: { '@type': 'Answer', text: 'The leasing fee at Property Management Consultants is a flat $500, charged once when a new tenant is placed. This covers listing, marketing, showings, screening, lease drafting, and move-in coordination. Most competitors charge 50–100% of the first month\'s rent ($700–$1,400 on a $1,400/mo property).' },
     },
     {
       '@type': 'Question',
       name: 'Are there any hidden fees?',
-      acceptedAnswer: { '@type': 'Answer', text: 'No. Property Management Consultants charges two fees only: a $250 one-time leasing fee and a 10% monthly management fee. There are no admin fees, setup fees, inspection fees, photography fees, portal fees, or early termination penalties for owners.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'No. Property Management Consultants charges two fees only: a $500 one-time leasing fee and a 10% monthly management fee. There are no admin fees, setup fees, inspection fees, photography fees, portal fees, or early termination penalties for owners.' },
     },
   ],
 };
@@ -77,7 +77,7 @@ export default function PricingPage() {
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
             <div className="bg-white rounded-2xl p-10 shadow-sm border border-gray-100 text-center">
-              <div className="text-6xl font-bold text-brand-blue mb-2">$250</div>
+              <div className="text-6xl font-bold text-brand-blue mb-2">$500</div>
               <div className="text-xl font-semibold text-brand-navy mb-4">One-Time Leasing Fee</div>
               <p className="text-gray-600">
                 Charged once when we place a new tenant. Covers listing, marketing, showings, screening, lease drafting, and move-in coordination. No charge at renewal.
@@ -94,7 +94,7 @@ export default function PricingPage() {
 
           <div className="mt-10 text-center">
             <div className="inline-block bg-brand-navy text-white px-6 py-3 rounded-full text-lg font-semibold">
-              Example: $1,400/mo rent → $140/mo fee + $250 once at lease signing
+              Example: $1,400/mo rent → $140/mo fee + $500 once at lease signing
             </div>
           </div>
         </div>
@@ -150,7 +150,7 @@ export default function PricingPage() {
               <tbody className="divide-y divide-gray-100">
                 {[
                   { fee: 'Monthly management (10% vs. 8–12%)', pmc: '$1,680/yr', comp: '$1,680/yr' },
-                  { fee: 'Leasing fee (new tenant)', pmc: '$250', comp: '$700–$1,400' },
+                  { fee: 'Leasing fee (new tenant)', pmc: '$500', comp: '$700–$1,400' },
                   { fee: 'Lease renewal fee', pmc: '$0', comp: '$150–$300' },
                   { fee: 'Inspection fees (2×/year)', pmc: '$0', comp: '$100–$300' },
                   { fee: 'Maintenance coordination markup', pmc: '$0', comp: '10–20% of invoice' },

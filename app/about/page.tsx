@@ -51,7 +51,7 @@ const faqSchema = {
       name: 'How is Property Management Consultants different from other property management companies?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'PMC offers completely transparent pricing with no hidden fees — just a $250 one-time leasing fee and 10% monthly management. The company was founded by a landlord who understands the investor perspective.',
+        text: 'PMC offers completely transparent pricing with no hidden fees — just a $500 one-time leasing fee and 10% monthly management. The company was founded by a landlord who understands the investor perspective.',
       },
     },
   ],
@@ -111,7 +111,7 @@ export default function AboutPage() {
                     },
                     {
                       title: 'Transparent pricing',
-                      desc: 'A one-time $250 leasing fee when we place a tenant. Then 10% of monthly rent — nothing else, ever.',
+                      desc: 'A one-time $500 leasing fee when we place a tenant. Then 10% of monthly rent — nothing else, ever.',
                     },
                     {
                       title: 'Personal relationships',

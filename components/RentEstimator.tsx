@@ -121,7 +121,7 @@ export default function RentEstimator() {
     const mid = roundTo25((lo + hi) / 2);
     const annual = mid * 12;
     const mgmt = mid * 0.10;
-    const netYear1 = annual - mgmt * 12 - (250 * numUnits);
+    const netYear1 = annual - mgmt * 12 - (500 * numUnits);
 
     return { lo, hi, mid, annual, mgmt, netYear1, numUnits, basePerUnit: roundTo25(basePerUnit) };
   }, [market, type, units, beds, baths, condition, features]);

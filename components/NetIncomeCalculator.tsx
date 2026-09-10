@@ -26,7 +26,7 @@ export default function NetIncomeCalculator() {
     } else if (period === 'year1') {
       const gross = r * u * 12;
       const mgmt = gross * 0.10;
-      const lease = 250 * u;
+      const lease = 500 * u;
       const net = gross - mgmt - lease;
       return { gross, mgmt, lease, net };
     } else {
@@ -122,7 +122,7 @@ export default function NetIncomeCalculator() {
             </div>
             <div className="flex justify-between">
               <span className={results.lease > 0 ? 'text-red-600' : 'text-green-700'}>
-                Leasing Fee {units > 1 ? `(${units} × $250)` : '($250/property)'}
+                Leasing Fee {units > 1 ? `(${units} × $500)` : '($500/property)'}
               </span>
               <span className={`font-semibold ${results.lease > 0 ? 'text-red-600' : 'text-green-700'}`}>
                 {results.lease > 0 ? `− ${fmt(results.lease)}` : '$0'}
@@ -155,7 +155,7 @@ export default function NetIncomeCalculator() {
           </div>
           <p className="text-xs text-gray-400 mt-4">
             {period === 'year1'
-              ? 'Year 1 includes the one-time $250 leasing fee per property. Year 2+ has no leasing fee unless re-tenanting.'
+              ? 'Year 1 includes the one-time $500 leasing fee per property. Year 2+ has no leasing fee unless re-tenanting.'
               : period === 'monthly'
               ? 'Monthly view excludes the one-time leasing fee (paid at lease signing).'
               : 'Year 2+ assumes existing tenants renew with no new leasing fee.'}

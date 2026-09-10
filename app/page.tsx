@@ -6,7 +6,7 @@ import PropertyCarousel from '@/components/PropertyCarousel';
 export const metadata: Metadata = {
   title: 'Property Management in Huntsville, AL | Property Management Consultants',
   description:
-    'Property Management Consultants offers transparent residential property management in Huntsville and North Alabama. $250 leasing fee + 10% monthly — nothing else.',
+    'Property Management Consultants offers transparent residential property management in Huntsville and North Alabama. $500 leasing fee + 10% monthly — nothing else.',
 };
 
 const services = [
@@ -340,7 +340,7 @@ export default function HomePage() {
             {[
               {
                 q: 'How much does property management cost?',
-                a: 'Our fees are simple and transparent: a $250 one-time leasing fee when we place a tenant, and 10% of gross monthly rent for ongoing management. No renewal fees, no startup fees, no maintenance markups, no admin fees. Ever.',
+                a: 'Our fees are simple and transparent: a $500 one-time leasing fee when we place a tenant, and 10% of gross monthly rent for ongoing management. No renewal fees, no startup fees, no maintenance markups, no admin fees. Ever.',
               },
               {
                 q: "What's included in the monthly management fee?",
